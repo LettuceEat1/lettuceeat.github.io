@@ -836,11 +836,11 @@ svg{
 /* cart */
 .cartTab{
     width: 400px;
-    height: 87vh;
-    background-color: #a1b662;
+    height: 88vh;
+    background-color: #6f884e;
     color: #eee;
     position: fixed;
-    top: 80px;
+    top: 91px;
     right: -400px;
     bottom: 0;
     display: grid;
