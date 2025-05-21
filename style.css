@@ -836,11 +836,11 @@ svg{
 /* cart */
 .cartTab{
     width: 400px;
-    height: 88vh;
+    height: 90vh;
     background-color: #6f884e;
     color: #eee;
     position: fixed;
-    top: 91px;
+    top: 80px;
     right: -400px;
     bottom: 0;
     display: grid;
@@ -879,7 +879,7 @@ body.showCart .container{
     cursor: pointer;
 }
 .cartTab .close{
-    background-color: #ff0000;
+    background-color: #ffffff;
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -893,12 +893,22 @@ body.showCart .container{
     border-radius: 0;     
   }
 
+
+
   body.showCart .cartTab {
     right: 0;             
   }
 }
 
-
+@media (max-width: 690px) and (min-width: 601px) {
+  .cartTab {
+    width: 400px;
+    height: 89vh;
+    top: 92px;
+    right: -400px;
+    bottom: 0;
+  }
+}
 
 .listCart .item img{
     width: 100%;
