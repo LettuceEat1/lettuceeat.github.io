@@ -883,6 +883,23 @@ body.showCart .container{
     padding-top: 30px;
     padding-bottom: 30px;
 }
+
+@media (max-width: 600px) {
+  .cartTab {
+    width: 100vw;         
+    height: 100vh;       
+    top: 0;              
+    right: -100vw;        
+    border-radius: 0;     
+  }
+
+  body.showCart .cartTab {
+    right: 0;             
+  }
+}
+
+
+
 .listCart .item img{
     width: 100%;
 }
