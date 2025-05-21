@@ -4,11 +4,15 @@
     box-sizing: border-box;
     
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 /*Original is 'courier-new', 'Courier New', monospace*/
 @font-face {
     font-family: Italicfont;
     src: url('CormorantGaramond-Italic.ttf');
-    font-size: medium;
     font-weight: 400;
     font-style: normal;
   } 
@@ -22,6 +26,14 @@
 
 @font-face {
     font-family: Extrafont3;
+    src: url('meltano-1747559441-0/Meltano.otf');
+    font-size: medium;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Extrafont4;
     src: url('CormorantGaramond-Regular.ttf');
     font-size: medium;
     font-weight: 400;
@@ -34,7 +46,13 @@
     font-weight: normal;
     font-style: normal;
 }
-/*the title font on homepage and ig the menu now*/
+
+@font-face {
+    font-family: Extrafont5;
+    src: url('Lora/Lora-VariableFont_wght.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
 h1 {
     font-weight: bold;
     color: #ffffff;
@@ -46,26 +64,39 @@ h2 {
     font-weight: bold;
     color: #ffffff;
     font-size: 30px;
-    font-family: Extrafont3;
+    font-family: Extrafont4;
     margin-bottom: 20px;
   }
 
 h3 {
     color: white;
     font-size: 17px;
-    font-family: Extrafont3;
+    font-family: Extrafont4;
     align-items: left;
     padding-left: 10px;
     padding-bottom: 20px;
 }
 
 h4 {
-    color: black;
+    color: #1d2b30;
     font-size: 25px;
     padding: 10px 0px;
     padding-bottom: 30px;
 
 }
+
+
+h5 {
+    font-weight: bold;
+    color: #18183bda;
+    font-size: 50px;
+    font-family: Extrafont3;
+    margin: 20px 0 20px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    grid-column: 1 / -1;
+  }
 
 .shadow {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
@@ -74,18 +105,27 @@ h4 {
 /*for the homepage*/
 .homebody{
     filter: brightness(70%);
-    background: url(https://images.pexels.com/photos/326281/pexels-photo-326281.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2) no-repeat;
+    background: url(website-pictures/homepage-top.jpeg) no-repeat;
     height: 90vh;
     background-size: cover;
     background-position: center;
-    font-family: Extrafont3;
+    font-family: Extrafont4;
 
 }
 
 /*for the about page*/
 .aboutbody{
-    background: url(https://images.pexels.com/photos/462042/pexels-photo-462042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat;
-    height: 50vh;
+    background: url(website-pictures/aboutpagesalad.png) no-repeat;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    font-family: Extrafont4;
+}
+
+/*for the takeout*/
+.takeoutbody{
+    background: url(website-pictures/aboutpagesalad.png) no-repeat;
+    height: 70vh;
     background-size: cover;
     background-position: center;
     font-family: Extrafont3;
@@ -93,13 +133,16 @@ h4 {
 
 /*this is for the navigation bar*/
 header{
+    position: absolute;
+    top: 0;
+    z-index: 1000;
     width: 100%;
     height: 75px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 40px 10%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.658);
     font-family: Extrafont3;
 }
 
@@ -127,20 +170,28 @@ header{
     padding-right: 10px;
 }
 
-/*this is the navi bar options*/
 nav li{
+    color: black;
     display: inline-block;
     list-style: none;
     padding: 0px 20px;
     font-family: Extrafont3;
 }
+
+nav ul li a:hover {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+    background-color: #e6e6e6; 
+    padding: 2px 0px;
+    border-radius: 2px;
+}
+
 a,button{
-    font-size: 16px;
+    font-size: 19px;
     font-weight: 500;
     color:#95a595;
     text-decoration: none;
     cursor: pointer;
-    font-family: Extrafont3;
+    font-family: Extrafont4;
 }
 
 /*this is the main title ig name*/
@@ -174,20 +225,20 @@ a,button{
     padding: 10px;
     background-color: #54634e;
     text-align: center;
-    font-family: Extrafont3;
+    font-family: Extrafont4;
 }
 
 .text1 h1 {
     margin-bottom: 20px;
     font-size: 36px;
-    font-family: Extrafont3;
+    font-family: Extrafont4;
 }
 
 .text1 p {
     margin-bottom: 20px;
-    font-size: 16px;
+    font-size: 19px;
     color: #333;
-    font-family: Extrafont3;
+    font-family: Extrafont4;
 }
 
 .text1 button {
@@ -197,8 +248,8 @@ a,button{
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
-    font-family: Extrafont3;
+    font-size: 19px;
+    font-family: Extrafont4;
 }
 
 .text1 button:hover {
@@ -237,8 +288,8 @@ a,button{
 }
 
 .flip-card {
-    width: 400px;
-    height: 250px;
+    width: 100%;
+    height: 240px;
     position: relative;
 }
 
@@ -291,7 +342,7 @@ a,button{
     text-align: center;
     color: white;
     z-index: 2;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(1, 2, 10, 0.7);
     padding: 20px 1000px;
     white-space:nowrap;
     border-radius: 1px;
@@ -299,10 +350,10 @@ a,button{
 }
 
 .flip-card-back {
-    background-color: rgba(67, 88, 69, 0.88);
+    background-color: #080d14e0;
     color: white;
     transform: rotateY(180deg);
-    font-size: 20px;
+    font-size: 16px;
     padding: 20px;
     z-index: 1;
 }
@@ -320,7 +371,7 @@ a,button{
 }
 
 .classification {
-    font-family: Extrafont3;
+    font-family: Extrafont4;
 }
 
 .price {
@@ -328,7 +379,7 @@ a,button{
     font-size: 18px;
     white-space: no-wrap;
     padding-left: 15px;
-    font-family: Extrafont3;
+    font-family: Extrafont4;
 }
 
 /* test 2 stuff */
@@ -338,7 +389,7 @@ section {
     justify-content: space-between;
     padding: 50px;
     flex-wrap: wrap;
-    font-family: Extrafont3;
+    font-family: Extrafont4;
 }
   
 .about-section, .menu-section {
@@ -352,17 +403,43 @@ section {
     margin-right: 10px;
     height: auto;
     position: relative;
-    border: 1px solid black;
     padding: 20px;
+    background-color: #23435e4f;
 }
   
 .about-text h1 {
     font-size: 36px;
-    color: #944242;
+    color: #305f69;
     margin-bottom: 20px;
 }
   
 .about-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    font-family: Extrafont4;
+}
+
+.faq-section {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 80px;
+    min-height: 50vh; /* Or remove fixed height altogether */
+}
+
+.faq-text {
+    flex: 1;
+    max-width: 50%;
+    margin-right: 30px;
+}
+
+.faq-text h1 {
+    font-size: 36px;
+    color: #944242;
+    margin-bottom: 20px;
+}
+
+.faq-text p {
     font-size: 18px;
     margin-bottom: 20px;
     line-height: 1.8;
@@ -387,7 +464,7 @@ section {
 }
 
 .learn-more-btn {
-    background-color: #a24a69;
+    background-color: #23415e;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -398,7 +475,7 @@ section {
 }
   
 .learn-more-btn:hover {
-    background-color: #872a50;
+    background-color: #1d2b30;
 }
   
 .about-image {
@@ -418,7 +495,7 @@ section {
 
 /*menu stuff*/
 .menuheader{
-    background: url("https://images.pexels.com/photos/114974/pexels-photo-114974.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background: url("website-pictures/menu-pic.jpeg");
     height: 90vh;
     background-size: cover;
     background-position: center;
@@ -449,7 +526,7 @@ section {
 
 /*dropdown menu for menu*/
 .dropbtn {
-    font-size: 16px;
+    font-size: 19px;
     font-weight: 500;
     color: #95a595;
     text-decoration: none;
@@ -494,8 +571,8 @@ section {
     font-size: 32px;
     font-weight: bold;
     color: #333; 
-    margin-bottom: 40px; 
-    margin-top: 30px;
+    margin-bottom: 80px; 
+    margin-top: 80px;
 }
 
 .angry-message {
@@ -511,28 +588,31 @@ section {
     align-items: center; 
     text-align: center; 
     height: 80vh; 
-    background: url('https://images.pexels.com/photos/3084550/pexels-photo-3084550.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center;
+    background: url('website-pictures/source-pic.jpeg') no-repeat center center;
     background-size: cover;
     position: relative;
+    padding-bottom: 4rem;
 }
 
 .source-box {
     background-color: rgba(49, 68, 51, 0.88); 
     color: white;
-    padding: 7px;
+    padding: 30px;
     border-radius: 10px;
     max-width: 600px;
     width: 80%;
+    margin-top: 150px;
+    
 }
 
 .source-box h1 {
     font-size: 36px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .source-box p {
     font-size: 18px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .source-box ul {
@@ -541,7 +621,7 @@ section {
 }
 
 .source-box li {
-    margin: 10px 0;
+    margin: 9px 0;
 }
 
 .source-box a {
@@ -559,7 +639,7 @@ section {
     color: white;
     text-align: center;
     padding: 20px 10px;
-    font-family: Extrafont3;
+    font-family: Extrafont4;
 }
 
 .footer-container {
@@ -581,3 +661,298 @@ section {
     text-decoration: underline;
 }
 
+body{
+    margin: 0;
+    font-family: 4;
+}
+
+
+svg{
+    width: 30px;
+}
+
+.icon-cart:hover {
+    background-color: rgb(209, 209, 209);
+    width: 30px;
+    border-radius: 20px;
+    height: 37px;
+}
+
+.icon-cart{
+    position: relative;
+}
+.icon-cart span{
+    position: absolute;
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+    top: 50%;
+    right: -20px;
+}
+.title{
+    font-size: xx-large;
+}
+.listProduct .item img{
+    width: 90%;
+    filter: drop-shadow(0 50px 20px #0009);
+}
+.listProduct{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.listProduct .item{
+    background-color: #EEEEE6;
+    padding: 20px;
+    border-radius: 20px;
+}
+.extra-padding {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.listProduct .item h2{
+    font-weight: 500;
+    font-size: large;
+}
+.listProduct .item .price{
+    letter-spacing: 7px;
+    font-size: small;
+}
+.listProduct .item button{
+    background-color: #353432;
+    color: #eee;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+.page-wrapper {
+  position: relative;      
+  overflow-y: auto;    
+}
+/* cart */
+.cartTab{
+    width: 400px;
+    height: 87vh;
+    background-color: #353432;
+    color: #eee;
+    position: fixed;
+    top: 80px;
+    right: -400px;
+    bottom: 0;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    transition: .5s;
+    z-index: 500;
+}
+
+body.showCart .cartTab{
+    right: 0;
+}
+body.showCart .container{
+    transform: translateX(0px);
+}
+.cartTab h6{
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+    font-size: 40px;
+}
+
+
+.cartTab .btn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    z-index: 400;
+}
+
+
+
+.cartTab button{
+    background-color: #E8BC0E;
+    border: none;
+    font-family: Poppins;
+    font-weight: 500;
+    cursor: pointer;
+}
+.cartTab .close{
+    background-color: #eee;
+}
+.listCart .item img{
+    width: 100%;
+}
+.listCart .item{
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+.listCart .quantity span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+    color: #555;
+    cursor: pointer;
+}
+.listCart .quantity span:nth-child(2){
+    background-color: transparent;
+    color: #eee;
+    cursor: auto;
+}
+.listCart .item:nth-child(even){
+    background-color: #eee1;
+}
+.listCart{
+    overflow: auto;
+}
+.listCart::-webkit-scrollbar{
+    width: 0;
+}
+
+button.addCart {
+  background-color: #23415e !important; 
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button.addCart:hover {
+  background-color: #1a3246 !important; /* Darker shade for hover */
+}
+
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+    padding: 21px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    z-index: 101;
+}
+
+.stickynav a {
+  position: relative;
+  text-decoration: none;
+  padding: 8px 0;
+  font-weight: bold;
+  color: rgb(95, 95, 95);
+
+}
+
+.stickynav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px; 
+  width: 100%;
+  height: 2px;
+  background-color: rgb(95, 95, 95);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.stickynav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+
+.sticky-header a {
+    padding: 8px 12px;
+}
+
+.sticky-header .icon-cart {
+    cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 992px) {
+    .listProduct{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* mobile */
+@media only screen and (max-width: 1105px) {
+    .listProduct{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width: 725px) {
+    .listProduct{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+/*SLIDE SHOW*/
+
+.containerr {
+    margin: 0;
+    padding: 0;
+}
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    
+
+}
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 7;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; 
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    /* Hide scrollbar cross-browser */
+    scrollbar-width: none; /* Firefox bums*/
+    -ms-overflow-style: none; /* herro */
+}
+.slider::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+.slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.slider-nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
