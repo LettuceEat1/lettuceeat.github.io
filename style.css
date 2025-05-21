@@ -879,7 +879,7 @@ body.showCart .container{
     cursor: pointer;
 }
 .cartTab .close{
-    background-color: #eee;
+    background-color: #ff0000;
     padding-top: 30px;
     padding-bottom: 30px;
 }
