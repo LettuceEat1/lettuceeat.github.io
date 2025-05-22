@@ -19,7 +19,7 @@ html {
 
 @font-face {
     font-family: Extrafont2;
-    src: url('PTSerifCaption-Regular.ttf');
+    src: url('Josefin_Sans/JosefinSans-VariableFont_wght.ttf');
     font-weight: normal;
     font-style: normal;
 }
@@ -856,10 +856,14 @@ body.showCart .container{
     transform: translateX(0px);
 }
 .cartTab h6{
-    padding: 20px;
+    padding: 10px;
     margin: 0;
     font-weight: 300;
     font-size: 40px;
+    text-align: center;
+    background-color: #25472b;
+    font-family: Extrafont3;
+    font-weight: bold;
 }
 
 
@@ -877,6 +881,7 @@ body.showCart .container{
     font-family: Poppins;
     font-weight: 500;
     cursor: pointer;
+    color: black;
 }
 .cartTab .close{
     background-color: #ffffff;
@@ -939,6 +944,7 @@ body.showCart .container{
 }
 .listCart{
     overflow: auto;
+    font-family: Extrafont2;
 }
 .listCart::-webkit-scrollbar{
     width: 0;
