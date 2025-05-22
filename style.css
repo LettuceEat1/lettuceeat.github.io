@@ -1242,12 +1242,12 @@ button.addCart:hover {
     margin-bottom: 0.5rem;
 }
 
-
 .vertical-images {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  
 }
 
 .vertical-images img {
