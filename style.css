@@ -152,6 +152,21 @@ header{
     
 }
 
+/*this is for the navigation bar*/
+nonstickyheader{
+    position: relative;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10%;
+    background: rgba(0, 0, 0, .95);
+    font-family: Extrafont3;
+    
+}
+
 /*if the logo becomes a picture we can get rid of this*/
 .logo{
     font-size: 30px;
@@ -918,9 +933,6 @@ body.showCart .container{
     right: -100vw;        
     border-radius: 0;     
   }
-
-
-
   body.showCart .cartTab {
     right: 0;             
   }
@@ -1068,6 +1080,18 @@ button.addCart:hover {
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
+@media screen and (max-width: 400px) {
+  .description {
+    font-size: 12px; 
+    padding: 0 10px; 
+  }
+  .takeoutbody .logo p {
+    font-size: 20px;
+  }
+}
+
+
 
 
 /*SLIDE SHOW*/
