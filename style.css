@@ -852,6 +852,8 @@ svg{
     width: 400px;
     height: 87vh;
     background-color: rgb(111, 136, 78);
+    height: 90vh;
+    background-color: #6f884e;
     color: #eee;
     position: fixed;
     top: 80px;
@@ -894,7 +896,7 @@ body.showCart .container{
     color: #1d2b30;
 }
 .cartTab .close{
-    background-color: #eee;
+    background-color: #ffffff;
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -1154,6 +1156,7 @@ button.addCart:hover {
   font-size: 2rem;
   color: #fffd;
 }
+/*border-bottom: 2px solid rgb(188, 188, 188); display: inline-block;*/
 
 
 
