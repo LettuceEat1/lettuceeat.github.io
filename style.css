@@ -42,7 +42,7 @@ html {
 
 @font-face {
     font-family: Logofont;
-    src: url('RougeScript-Regular.ttf');
+    src: url('Josefin_Sans/static/JosefinSans-Light.ttf');
     font-weight: normal;
     font-style: normal;
 }
@@ -162,6 +162,7 @@ header{
     font-family: Logofont;
     display: flex;
     max-width: 100%;
+    white-space: nowrap;
 }
 
 .logo p{
