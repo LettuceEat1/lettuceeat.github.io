@@ -139,17 +139,17 @@ h5 {
 
 /*this is for the navigation bar*/
 header{
-    position: absolute;
+    position: sticky;
     top: 0;
     z-index: 1000;
     width: 100%;
-    height: 75px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 10%;
+    padding: 0px 10%;
     background: rgba(0, 0, 0, 0.658);
     font-family: Extrafont3;
+    
 }
 
 /*if the logo becomes a picture we can get rid of this*/
