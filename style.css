@@ -19,7 +19,7 @@ html {
 
 @font-face {
     font-family: Extrafont2;
-    src: url('Josefin_Sans/static/JosefinSans-Light.ttf');
+    src: url('PTSerifCaption-Regular.ttf');
     font-weight: normal;
     font-style: normal;
 }
@@ -42,7 +42,7 @@ html {
 
 @font-face {
     font-family: Logofont;
-    src: url('CormorantGaramond-Regular.ttf');
+    src: url('RougeScript-Regular.ttf');
     font-weight: normal;
     font-style: normal;
 }
@@ -156,8 +156,7 @@ header{
 }
 
 .logo p{
-    padding-top: 32px;
-    white-space: nowrap;
+    padding-top: 32px;;
 }
 
 .logo img{
@@ -388,7 +387,7 @@ a,button{
 }
 
 .flip-card-back {
-    background-color: #274e31;
+    background-color: #080d14e0;
     color: white;
     transform: rotateY(180deg);
     font-size: 16px;
@@ -591,7 +590,7 @@ section {
 
 /*menu stuff*/
 .menuheader{
-    background: url("website-pictures/better-menu.jpg");
+    background: url("website-pictures/menu-pic.jpeg");
     height: 90vh;
     background-size: cover;
     background-position: center;
@@ -606,21 +605,8 @@ section {
     color: white;
     padding-left: 50px;
     text-shadow: 5px 5px 10px grey;
-    background-color: rgb(29, 43, 48, .7);
-    padding-bottom: 10px;
-    padding-left: 100px;
-    padding-top: 0px;
-}
 
-.content2 p{
-    font-family: Extrafont2;
-    font-weight: lighter;
 }
-
-.content2 h1{
-    font-size: 60px;
-}
-
 
 .bar {
     width: 100%;
@@ -745,7 +731,7 @@ section {
 }
 
 .footer {
-    background-color: #3d271e;
+    background-color: #3a4c5e;
     color: white;
     text-align: center;
     padding: 20px 10px;
@@ -850,8 +836,6 @@ svg{
 /* cart */
 .cartTab{
     width: 400px;
-    height: 87vh;
-    background-color: rgb(111, 136, 78);
     height: 90vh;
     background-color: #6f884e;
     color: #eee;
@@ -893,7 +877,6 @@ body.showCart .container{
     font-family: Poppins;
     font-weight: 500;
     cursor: pointer;
-    color: #1d2b30;
 }
 .cartTab .close{
     background-color: #ffffff;
@@ -901,12 +884,30 @@ body.showCart .container{
     padding-bottom: 30px;
 }
 
-.shoppingcontainer {
-    margin-bottom: 50px;
-    padding-bottom: 80px;
-    background-color: rgb(48, 85, 48);
-    font-family: Extrafont3;
-    font-weight: 900;
+@media (max-width: 600px) {
+  .cartTab {
+    width: 100vw;         
+    height: 100vh;       
+    top: 0;              
+    right: -100vw;        
+    border-radius: 0;     
+  }
+
+
+
+  body.showCart .cartTab {
+    right: 0;             
+  }
+}
+
+@media (max-width: 690px) and (min-width: 601px) {
+  .cartTab {
+    width: 400px;
+    height: 89vh;
+    top: 92px;
+    right: -400px;
+    bottom: 0;
+  }
 }
 
 .listCart .item img{
@@ -938,15 +939,13 @@ body.showCart .container{
 }
 .listCart{
     overflow: auto;
-    padding-top: 10px;
-    font-family: Extrafont3;
 }
 .listCart::-webkit-scrollbar{
     width: 0;
 }
 
 button.addCart {
-  background-color: #164421 !important; 
+  background-color: #23415e !important; 
   color: white;
   border: none;
   padding: 10px 16px;
@@ -957,7 +956,7 @@ button.addCart {
 }
 
 button.addCart:hover {
-  background-color: #0f2e16 !important; /* Darker shade for hover */
+  background-color: #1a3246 !important; /* Darker shade for hover */
 }
 
 .cartTotal {
@@ -1141,24 +1140,26 @@ button.addCart:hover {
 
 .reviews-section {
   padding: 50px 20px;
-  background-color: #3e772f;
+  background-color: #25472b;
   text-align: center;
 }
 
-
-.stars {
-    font-size: 2rem;
-    color: gold;
-    margin-bottom: 0.5rem;
-}
-
 .reviews-section h2 {
-  font-size: 2rem;
-  color: #fffd;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #678855;
+    font-weight: 1000;
+    text-shadow:
+        -1px -1px 0 #ffffff,
+        1px -1px 0 #ffffff,
+        -1px 1px 0 #ffffff,
+        2px 2px 0 #ffffff,
+        -1.5px 0px 0 #ffffff,
+        1.5px 0px 0 #ffffff,
+        0px -1.5px 0 #ffffff,
+        0px 1.5px 0 #ffffff;
 }
 /*border-bottom: 2px solid rgb(188, 188, 188); display: inline-block;*/
-
-
 
 .reviews-container {
   display: flex;
@@ -1204,10 +1205,8 @@ button.addCart:hover {
   max-width: 100%;
   height: auto;
   margin-bottom: 1rem; 
-  max-width: 900px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
-
 
 
 .checkout-modal-overlay {
