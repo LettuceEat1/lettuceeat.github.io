@@ -1233,6 +1233,13 @@ button.addCart:hover {
   color: #444;
 }
 
+.stars {
+    font-size: 2rem;
+    color: rgb(211, 185, 39);
+    margin-bottom: 0.5rem;
+}
+
+
 .vertical-images {
   display: flex;
   flex-direction: column;
