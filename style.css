@@ -1207,11 +1207,13 @@ button.addCart:hover {
 }
 
 .vertical-images img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 1rem; 
-  margin-top: 20px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem; 
+    margin-top: 20px;
+    max-width: 900px;
+
 }
 
 
