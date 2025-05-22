@@ -1083,7 +1083,7 @@ button.addCart:hover {
 
 @media screen and (max-width: 400px) {
   .description {
-    font-size: 12px; 
+    font-size: 13px !important; 
     padding: 0 10px; 
   }
   .takeoutbody .logo p {
