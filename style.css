@@ -53,6 +53,15 @@ html {
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: Extrafont7;
+    src: url('Josefin_Sans/static/JosefinSans-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 h1 {
     font-weight: bold;
     font-size: 70px;
@@ -590,7 +599,7 @@ section {
 
 /*menu stuff*/
 .menuheader{
-    background: url("website-pictures/menu-pic.jpeg");
+    background: url("website-pictures/better-menu.jpg");
     height: 90vh;
     background-size: cover;
     background-position: center;
@@ -605,7 +614,18 @@ section {
     color: white;
     padding-left: 50px;
     text-shadow: 5px 5px 10px grey;
+    background-color: rgb(26, 50, 70, .7);
+    padding-bottom: 10px;
+}
 
+.content2 h1 {
+    font-family: Extrafont3;
+    font-size: 60px;
+}
+
+.content2 p {
+    font-family: Extrafont7;
+    font-weight: lighter;
 }
 
 .bar {
@@ -731,7 +751,7 @@ section {
 }
 
 .footer {
-    background-color: #3a4c5e;
+    background-color: #33170e;
     color: white;
     text-align: center;
     padding: 20px 10px;
@@ -1153,17 +1173,8 @@ button.addCart:hover {
 .reviews-section h2 {
     font-size: 2rem;
     margin-bottom: 30px;
-    color: #678855;
+    color: #040e06;
     font-weight: 1000;
-    text-shadow:
-        -1px -1px 0 #ffffff,
-        1px -1px 0 #ffffff,
-        -1px 1px 0 #ffffff,
-        2px 2px 0 #ffffff,
-        -1.5px 0px 0 #ffffff,
-        1.5px 0px 0 #ffffff,
-        0px -1.5px 0 #ffffff,
-        0px 1.5px 0 #ffffff;
 }
 /*border-bottom: 2px solid rgb(188, 188, 188); display: inline-block;*/
 
